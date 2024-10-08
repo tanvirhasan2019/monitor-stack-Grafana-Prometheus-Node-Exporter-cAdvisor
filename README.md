@@ -205,31 +205,27 @@ You can now access the services using the following URLs in your web browser:
 ## 8. Importing Grafana Dashboards
 Once Grafana is up and running, you can import ready-made dashboards for Prometheus, Node Exporter, and cAdvisor:
 
-Log into Grafana:
+### Log into Grafana:
+- Go to [http://your-server-ip:3000]().
+- Log in with your credentials.
 
-Go to http://<your-server-ip>:3000
-Log in with your credentials.
-Import Dashboards:
+### Import Dashboards:
+1. Go to the Dashboard menu (left sidebar) and click **Import**.
+2. You can search for the following dashboards by their IDs:
+   - **Node Exporter Full Dashboard (ID: 1860)**: For system metrics.
 
-Go to the Dashboard menu (left sidebar) and click Import.
+### Configure Datasource:
+- Ensure that **Prometheus** is set as the default datasource for the imported dashboards.
 
-You can search for the following dashboards by their IDs:
+## 9. Final Notes
 
-Node Exporter Full Dashboard (ID: 1860): For system metrics.
-Docker and cAdvisor Dashboard (ID: 893): For container metrics.
-Configure Datasource:
+### Security Considerations:
+- Consider securing your Grafana instance with a more robust authentication system and using **HTTPS** with a reverse proxy.
+- Restrict access to **Prometheus**, **cAdvisor**, and **Node Exporter** endpoints for security reasons.
 
-Ensure that Prometheus is set as the default datasource for the imported dashboards.
+### Backup & Persistence:
+- Ensure the volumes in the Docker Compose file are set up for data persistence across container restarts.
 
+### Scaling:
+- This setup can be scaled by adding more Prometheus targets or adding alerting rules to Prometheus as your infrastructure grows.
 
-## 8. Final Notes
-Security Considerations:
-
-Consider securing your Grafana instance with a more robust authentication system and using HTTPS with a reverse proxy.
-Restrict access to Prometheus, cAdvisor, and Node Exporter endpoints for security reasons.
-Backup & Persistence:
-
-Ensure the volumes in the Docker Compose file are set up for data persistence across container restarts.
-Scaling:
-
-This setup can be scaled by adding more Prometheus targets or adding alerting rules to Prometheus as your infrastructure grows.
