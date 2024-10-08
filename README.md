@@ -4,15 +4,15 @@ A comprehensive guide to setting up a monitoring stack on an Ubuntu machine usin
 
 ## Table of Contents
 
-1. [Prerequisites](#prerequisites)
-2. [Install Docker & Docker Compose](#install-docker--docker-compose)
-3. [Create the Docker Compose File](#create-the-docker-compose-file)
-4. [Create Prometheus Configuration File](#create-prometheus-configuration-file)
-5. [Directory Structure](#directory-structure)
-6. [Running the Stack](#running-the-stack)
-7. [Accessing the Services](#accessing-the-services)
-8. [Importing Grafana Dashboards](#importing-grafana-dashboards)
-9. [Final Notes](#final-notes)
+1. [Prerequisites](#1-prerequisites)
+2. [Install Docker & Docker Compose](#2-install-docker--docker-compose)
+3. [Create the Docker Compose File](#3-create-the-docker-compose-file)
+4. [Create Prometheus Configuration File](#4-create-prometheus-configuration-file)
+5. [Directory Structure](#5-directory-structure)
+6. [Running the Stack](#6-running-the-stack)
+7. [Accessing the Services](#7-accessing-the-services)
+8. [Importing Grafana Dashboards](#8-importing-grafana-dashboards)
+9. [Final Notes](#9-final-notes)
 
 ---
 
