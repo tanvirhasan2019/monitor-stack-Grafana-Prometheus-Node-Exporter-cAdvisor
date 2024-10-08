@@ -11,7 +11,7 @@ Ensure the following are installed on your system:
 
 ### 2. **Setup**
 
-1. **Clone this repository:**
+1. **Make a folder:**
    ```bash
-   git clone https://github.com/your-repo/monitoring-stack.git
+   mkdir monitoring-stack
    cd monitoring-stack
