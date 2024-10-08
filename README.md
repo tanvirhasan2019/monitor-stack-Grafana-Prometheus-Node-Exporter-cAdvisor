@@ -155,3 +155,80 @@ scrape_configs:
       - targets: ['cadvisor:8080']
 ```
 
+## 5. Directory Structure
+After creating the docker-compose.yml and Prometheus configuration, your directory structure should look like this:
+
+bash
+Copy code
+~/monitoring-stack/
+├── docker-compose.yml
+├── prometheus/
+│   └── prometheus.yml
+└── grafana/
+    ├── dashboards/
+    └── provisioning/
+        ├── datasources/
+        └── dashboards/
+
+
+## 6. Running the Stack
+
+Now that the configuration files are ready, you can start the monitoring stack.
+
+### In the ~/monitoring-stack directory, run:
+
+```bash
+docker-compose up -d
+```
+This command will download the necessary Docker images and start the containers in detached mode.
+
+### To check if the containers are running:
+
+```bash
+docker-compose ps
+```
+You should see all four services (prometheus, node_exporter, cadvisor, grafana) running.
+
+
+## 7. Accessing the Services
+You can now access the services using the following URLs in your web browser:
+
+Prometheus: http://<your-server-ip>:9090
+Node Exporter: http://<your-server-ip>:9100/metrics
+cAdvisor: http://<your-server-ip>:8080
+Grafana: http://<your-server-ip>:3000
+Grafana Default Credentials:
+Username: admin
+Password: Use the value you set in the GF_SECURITY_ADMIN_PASSWORD environment variable.
+
+## 8. Importing Grafana Dashboards
+Once Grafana is up and running, you can import ready-made dashboards for Prometheus, Node Exporter, and cAdvisor:
+
+Log into Grafana:
+
+Go to http://<your-server-ip>:3000
+Log in with your credentials.
+Import Dashboards:
+
+Go to the Dashboard menu (left sidebar) and click Import.
+
+You can search for the following dashboards by their IDs:
+
+Node Exporter Full Dashboard (ID: 1860): For system metrics.
+Docker and cAdvisor Dashboard (ID: 893): For container metrics.
+Configure Datasource:
+
+Ensure that Prometheus is set as the default datasource for the imported dashboards.
+
+
+## 8. Final Notes
+Security Considerations:
+
+Consider securing your Grafana instance with a more robust authentication system and using HTTPS with a reverse proxy.
+Restrict access to Prometheus, cAdvisor, and Node Exporter endpoints for security reasons.
+Backup & Persistence:
+
+Ensure the volumes in the Docker Compose file are set up for data persistence across container restarts.
+Scaling:
+
+This setup can be scaled by adding more Prometheus targets or adding alerting rules to Prometheus as your infrastructure grows.
