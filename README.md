@@ -192,10 +192,10 @@ You should see all four services (prometheus, node_exporter, cadvisor, grafana) 
 
 You can now access the services using the following URLs in your web browser:
 
-- **Prometheus**: [http://<your-server-ip>:9090](http://<your-server-ip>:9090)
-- **Node Exporter**: [http://<your-server-ip>:9100/metrics](http://<your-server-ip>:9100/metrics)
-- **cAdvisor**: [http://<your-server-ip>:8080](http://<your-server-ip>:8080)
-- **Grafana**: [http://<your-server-ip>:3000](http://<your-server-ip>:3000)
+- **Prometheus**: [http://<your-server-ip>:9090](http://your-server-ip:9090)
+- **Node Exporter**: [http://<your-server-ip>:9100/metrics](http://your-server-ip:9100/metrics)
+- **cAdvisor**: [http://<your-server-ip>:8080](http://your-server-ip:8080)
+- **Grafana**: [http://<your-server-ip>:3000](http://your-server-ip:3000)
 
 ### Grafana Default Credentials:
 - **Username**: `admin`
