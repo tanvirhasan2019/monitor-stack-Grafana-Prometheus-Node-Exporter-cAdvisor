@@ -2,6 +2,8 @@
 
 A comprehensive guide to setting up a monitoring stack on an Ubuntu machine using Docker Compose.
 
+![Grafana Dashboard](https://github.com/tanvirhasan2019/monitor-stack-Grafana-Prometheus-Node-Exporter-cAdvisor-/blob/main/grafana%20dashboard.png)
+
 ## Table of Contents
 
 1. [Prerequisites](#1-prerequisites)
