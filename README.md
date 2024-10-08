@@ -158,17 +158,12 @@ scrape_configs:
 ## 5. Directory Structure
 After creating the docker-compose.yml and Prometheus configuration, your directory structure should look like this:
 
-bash
-Copy code
-~/monitoring-stack/
-├── docker-compose.yml
-├── prometheus/
-│   └── prometheus.yml
-└── grafana/
-    ├── dashboards/
-    └── provisioning/
-        ├── datasources/
-        └── dashboards/
+- `docker-compose.yml`: Defines the services for Prometheus, Node Exporter, cAdvisor, and Grafana.
+- `prometheus.yml`: Configuration for Prometheus to scrape metrics from the services.
+- `grafana/dashboards/`: Stores the Grafana dashboard JSON files.
+- `grafana/provisioning/datasources/`: Configuration for connecting Grafana to Prometheus.
+- `grafana/provisioning/dashboards/`: Dashboard provisioning configurations for Grafana.
+
 
 
 ## 6. Running the Stack
