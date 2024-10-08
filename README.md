@@ -189,15 +189,18 @@ You should see all four services (prometheus, node_exporter, cadvisor, grafana) 
 
 
 ## 7. Accessing the Services
+
 You can now access the services using the following URLs in your web browser:
 
-Prometheus: http://<your-server-ip>:9090
-Node Exporter: http://<your-server-ip>:9100/metrics
-cAdvisor: http://<your-server-ip>:8080
-Grafana: http://<your-server-ip>:3000
-Grafana Default Credentials:
-Username: admin
-Password: Use the value you set in the GF_SECURITY_ADMIN_PASSWORD environment variable.
+- **Prometheus**: [http://<your-server-ip>:9090](http://<your-server-ip>:9090)
+- **Node Exporter**: [http://<your-server-ip>:9100/metrics](http://<your-server-ip>:9100/metrics)
+- **cAdvisor**: [http://<your-server-ip>:8080](http://<your-server-ip>:8080)
+- **Grafana**: [http://<your-server-ip>:3000](http://<your-server-ip>:3000)
+
+### Grafana Default Credentials:
+- **Username**: `admin`
+- **Password**: Use the value you set in the `GF_SECURITY_ADMIN_PASSWORD` environment variable.
+
 
 ## 8. Importing Grafana Dashboards
 Once Grafana is up and running, you can import ready-made dashboards for Prometheus, Node Exporter, and cAdvisor:
